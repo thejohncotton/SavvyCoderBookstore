@@ -12,6 +12,8 @@ body {
     "navigation"
     "header"
     "content"
+    "book"
+    "form"
     "footer";
     min-height: 100vh;
 }
@@ -32,6 +34,15 @@ body {
     grid-area: content;
     background-color: #336;
 }
+.book {
+    grid-area: book;
+    padding: 2em;
+
+}
+
+.submission {
+    grid-area: form;
+}
 .footer {
     grid-area: footer;
     background-color:#ff2;
@@ -44,6 +55,9 @@ body {
       grid-template-areas:
         "navigation header"
         "navigation content"
+        "navigation book"
+        "navigation book2"
+        "navigation form"
         "navigation footer";
         
     }

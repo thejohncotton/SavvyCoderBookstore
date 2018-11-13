@@ -46,7 +46,6 @@ function render(state) {
         ${Header(state)}
         ${Content(state)}
         ${Book(book1)}
-        ${Book(book2)}
         ${Form}
         ${Footer(state)}
       `;
