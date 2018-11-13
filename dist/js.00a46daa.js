@@ -146,7 +146,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = _default;
 
 function _default() {
-  return "<div class=\"footer\">\n\n    </div>";
+  return "<div class=\"footer\">\n    <p>&#169;2018</p>\n    <li><a href=\"https://github.com/thejohncotton/SavvyCoderBookstore\"><i class=\"fab fa-github\"></i></a></li>\n    </div>";
 }
 },{}],"components/Book.js":[function(require,module,exports) {
 "use strict";
@@ -216,7 +216,7 @@ function render(state) {
 
 render(state.Home);
 
-},{"../components/Navigation":"components/Navigation.js","../components/Header":"components/Header.js","../components/Content":"components/Content.js","../components/Footer":"components/Footer.js","../components/Book":"components/Book.js","../components/Form":"components/Form.js"}],"../../../.npm/_npx/25469/lib/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"../components/Navigation":"components/Navigation.js","../components/Header":"components/Header.js","../components/Content":"components/Content.js","../components/Footer":"components/Footer.js","../components/Book":"components/Book.js","../components/Form":"components/Form.js"}],"../../../.nvm/versions/node/v10.12.0/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -244,6 +244,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
+
 
   var ws = new WebSocket(protocol + '://' + hostname + ':' + "58554" + '/');
   ws.onmessage = function (event) {

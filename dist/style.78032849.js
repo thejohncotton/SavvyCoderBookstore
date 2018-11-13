@@ -177,6 +177,7 @@ var reloadCSS = require('_css_loader');
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
 
+
 },{"_css_loader":"../../../.npm/_npx/24807/lib/node_modules/parcel/src/builtins/css-loader.js"}],"../../../.npm/_npx/25469/lib/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 
 var global = arguments[3];
@@ -206,7 +207,9 @@ if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
 
+
   var ws = new WebSocket(protocol + '://' + hostname + ':' + "60912" + '/');
+
 
 
   ws.onmessage = function (event) {
@@ -350,5 +353,7 @@ function hmrAccept(bundle, id) {
   });
 }
 
+
 },{}]},{},["../../../.npm/_npx/25469/lib/node_modules/parcel/src/builtins/hmr-runtime.js"], null)
+
 
