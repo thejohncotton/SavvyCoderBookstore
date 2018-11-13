@@ -156,8 +156,8 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = _default;
 
-function _default(state) {
-  return "<div class=\"book\"></div>";
+function _default(book) {
+  return "<div class=\"book\">\n        <h2>".concat(book.name, "</h2>\n        <h3>").concat(book.author, "</h3>\n        <img src=\"").concat(book.pictureUrl, "\"></img>\n        <h2>").concat(book.price, "</h2>\n        <ul>\n            <li>").concat(book.sellingPoints[0], "</li>\n            <li>").concat(book.sellingPoints[1], "</li>\n            <li>").concat(book.sellingPoints[2], "</li>\n        </ul>    \n    </div>");
 }
 },{}],"components/Form.js":[function(require,module,exports) {
 "use strict";
@@ -185,7 +185,24 @@ var _Form = _interopRequireDefault(require("../components/Form"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// state object
+// books
+var book1 = {
+  "id": 1,
+  "name": "Lasagna: A Retrospective",
+  "author": "Garfield",
+  "pictureUrl": "http://graphics8.nytimes.com/images/2015/10/15/dining/15RECIPE20DIN/15RECIPE20DIN-articleLarge.jpg",
+  "price": 24,
+  "sellingPoints": ["Lasagna is delicious.", "The essential guide to Italian casseroles of all types.", "Real G's move silent, like Lasagna. -Lil Wayne"]
+};
+var book2 = {
+  "id": 1,
+  "name": "Purr Programming",
+  "author": "Mr. Meow",
+  "pictureUrl": "https://media.giphy.com/media/sIIhZliB2McAo/giphy.gif",
+  "price": 27,
+  "sellingPoints": ["learn faster.", "Meow", "purrrrrr"] // state object
+
+};
 var state = {
   Home: {
     title: 'store'
@@ -194,11 +211,13 @@ var state = {
 var root = document.querySelector("#root"); // this doesn't need to be queried every time we re-render
 
 function render(state) {
-  root.innerHTML = "\n        ".concat((0, _Navigation.default)(state), "\n        ").concat((0, _Header.default)(state), "\n        ").concat((0, _Content.default)(state), "\n        ").concat(_Form.default, "\n        ").concat((0, _Footer.default)(state), "\n      ");
+  root.innerHTML = "\n        ".concat((0, _Navigation.default)(state), "\n        ").concat((0, _Header.default)(state), "\n        ").concat((0, _Content.default)(state), "\n        ").concat((0, _Book.default)(book1), "\n        ").concat((0, _Book.default)(book2), "\n        ").concat(_Form.default, "\n        ").concat((0, _Footer.default)(state), "\n      ");
 }
 
 render(state.Home);
+
 },{"../components/Navigation":"components/Navigation.js","../components/Header":"components/Header.js","../components/Content":"components/Content.js","../components/Footer":"components/Footer.js","../components/Book":"components/Book.js","../components/Form":"components/Form.js"}],"../../../.nvm/versions/node/v10.12.0/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -225,8 +244,9 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49917" + '/');
 
+
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58554" + '/');
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
 
@@ -367,5 +387,7 @@ function hmrAccept(bundle, id) {
     return hmrAccept(global.parcelRequire, id);
   });
 }
-},{}]},{},["../../../.nvm/versions/node/v10.12.0/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/index.js"], null)
+
+},{}]},{},["../../../.npm/_npx/25469/lib/node_modules/parcel/src/builtins/hmr-runtime.js","js/index.js"], null)
+
 //# sourceMappingURL=/js.00a46daa.map

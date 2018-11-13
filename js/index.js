@@ -5,6 +5,33 @@ import Footer from '../components/Footer'
 import Book from '../components/Book'
 import Form from '../components/Form'
 
+// books
+var book1 = {
+    "id": 1,
+    "name": "Lasagna: A Retrospective",
+    "author": "Garfield",
+    "pictureUrl": "http://graphics8.nytimes.com/images/2015/10/15/dining/15RECIPE20DIN/15RECIPE20DIN-articleLarge.jpg",
+    "price": 24,
+    "sellingPoints": [
+        "Lasagna is delicious.",
+        "The essential guide to Italian casseroles of all types.",
+        "Real G's move silent, like Lasagna. -Lil Wayne"
+    ]
+}
+var book2 = {
+    "id": 1,
+    "name": "Purr Programming",
+    "author": "Mr. Meow",
+    "pictureUrl": "https://media.giphy.com/media/sIIhZliB2McAo/giphy.gif",
+    "price": 27,
+    "sellingPoints": [
+        "learn faster.",
+        "Meow",
+        "purrrrrr"
+    ]
+}
+
+
 // state object
 let state = {
     Home: {
@@ -18,6 +45,8 @@ function render(state) {
         ${Navigation(state)}
         ${Header(state)}
         ${Content(state)}
+        ${Book(book1)}
+        ${Book(book2)}
         ${Form}
         ${Footer(state)}
       `;
