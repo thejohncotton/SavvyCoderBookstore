@@ -113,7 +113,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = _default;
 
 function _default(state) {
-  return "<div class=\"navigation\">\n        <h2><i class=\"fa fa-book\"></i> ".concat(state.title, "</h2>\n    </div>");
+  return "\n  \n  \n  <div class=\"navigation\">\n\n  <a href=\"#top\"><h2><i class=\"fa fa-book\"></a></i> ".concat(state.title, "</h2>\n\n  <br>\n\n  <a href=\"#form\">Add New</a>\n\n  <br>\n\n  \n\n    </div>");
 }
 },{}],"components/Header.js":[function(require,module,exports) {
 "use strict";
@@ -146,7 +146,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = _default;
 
 function _default() {
-  return "<div class=\"footer\">\n    <p>&#169;2018</p>\n    <li><a href=\"https://github.com/thejohncotton/SavvyCoderBookstore\"><i class=\"fab fa-github\"></i></a></li>\n    </div>";
+  return "<div class=\"footer\" id=\"footer\">\n    <p>&#169;2018</p>\n    <li><a href=\"https://github.com/thejohncotton/SavvyCoderBookstore\"><i class=\"fab fa-github\"></i></a></li>\n    </div>";
 }
 },{}],"components/Book.js":[function(require,module,exports) {
 "use strict";
@@ -242,7 +242,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60912" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49383" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

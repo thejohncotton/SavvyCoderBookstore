@@ -16,11 +16,28 @@ body {
     min-height: 100vh;
 }
 
-.navigation {
+.navigation  {
     grid-area: navigation;
     background-color: #333;
     color: #fff;
     padding-left: 1em;
+    padding-top:1em;
+    cursor: pointer;
+      
+}
+
+a:hover {
+color:#ddd;
+}
+
+a:visited {
+    color: #ff2;
+}
+
+
+
+a {
+    display:inline-block
 }
 
 
