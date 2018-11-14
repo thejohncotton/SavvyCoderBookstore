@@ -1,0 +1,67 @@
+/* Set type */
+h1,h2,h3 {
+    font-family: 'Raleway', sans-serif;
+}
+
+h4,h5,p,a,li {
+font-family: 'Montserrat', sans-serif;
+}
+body {
+    display: grid;
+    grid-template-areas:
+    "navigation"
+    "header"
+    "content"
+    "book"
+    "form"
+    "footer";
+    min-height: 100vh;
+}
+
+.navigation {
+    grid-area: navigation;
+    background-color: #333;
+    color: #fff;
+    padding-left: 1em;
+}
+
+
+.header {
+    grid-area: header;
+    background-color: #ddd;
+}
+.content {
+    grid-area: content;
+    background-color: #336;
+}
+.book {
+    grid-area: book;
+    padding: 2em;
+
+}
+
+.submission {
+    grid-area: form;
+}
+.footer {
+    grid-area: footer;
+    background-color:#ff2;
+}
+/* Break into sidebar layout on large screens */
+@media (min-width: 768px) {
+    body {
+      grid-template-columns: 10rem auto;
+      grid-template-rows: min-content auto min-content;
+      grid-template-areas:
+        "navigation header"
+        "navigation content"
+        "navigation book"
+        "navigation book2"
+        "navigation form"
+        "navigation footer";
+        
+    }
+    .navigation {
+        min-height: 100vh;
+    }
+}
